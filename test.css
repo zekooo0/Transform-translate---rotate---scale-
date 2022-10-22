@@ -1,0 +1,117 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: cairo;
+}
+
+.first {
+  width: 300px;
+  height: 200px;
+  margin: 50px auto;
+  color: #03a9f5;
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+
+}
+
+.first::before {
+  content: "";
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  z-index: -1;
+  background-color: #03a9f5;
+  transform: rotate(174deg);
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(174deg);
+  -ms-transform: rotate(174deg);
+  -o-transform: rotate(174deg);
+}
+
+.first::after {
+  content: "";
+  background-color: #ea1e63;
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  z-index: -2;
+  transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+}
+
+/* ================================================ */
+.sec {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 30px;
+
+}
+
+.sec::before {
+  content: "";
+  position: absolute;
+  height: 110%;
+  width: 110%;
+  border: 10px solid;
+  border-radius: 50%;
+  border-color: #ea1e63 #ea1e63 #ea1e63 transparent;
+  transition: .5s;
+}
+
+.sec::after {
+  content: "";
+  position: absolute;
+  height: 120%;
+  width: 120%;
+  border: 10px solid;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-color: #03a9f5 transparent #03a9f5 #03a9f5;
+  transition: .5s;
+  transition-delay: .5s;
+}
+
+.sec:hover::after {
+  transform: rotate(1turn);
+  -webkit-transform: rotate(1turn);
+  -moz-transform: rotate(1turn);
+  -ms-transform: rotate(1turn);
+  -o-transform: rotate(1turn);
+}
+
+.sec:hover::before {
+  transform: rotate(1turn);
+  -webkit-transform: rotate(1turn);
+  -moz-transform: rotate(1turn);
+  -ms-transform: rotate(1turn);
+  -o-transform: rotate(1turn);
+}
