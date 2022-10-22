@@ -82,6 +82,7 @@ html {
   border-radius: 50%;
   border-color: #ea1e63 #ea1e63 #ea1e63 transparent;
   transition: .5s;
+  transition-timing-function: ease;
 }
 
 .sec::after {
@@ -98,6 +99,7 @@ html {
   border-color: #03a9f5 transparent #03a9f5 #03a9f5;
   transition: .5s;
   transition-delay: .5s;
+  transition-timing-function: ease;
 }
 
 .sec:hover::after {
